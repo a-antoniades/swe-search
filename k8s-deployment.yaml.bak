@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streamlit-moatless
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: streamlit-moatless
+  template:
+    metadata:
+      labels:
+        app: streamlit-moatless
+    spec:
+      containers:
+      - name: streamlit-moatless
+        image: aorwall/moatless-vizualize-tree:953fa2e
+        ports:
+        - containerPort: 8501
+        env:
+        - name: MOATLESS_DIR
+          value: "/tmp/moatless"
+        volumeMounts:
+        - name: moatless-data
+          mountPath: /tmp/moatless
+      volumes:
+      - name: moatless-data
+        emptyDir: {}
