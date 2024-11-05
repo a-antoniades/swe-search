@@ -2,7 +2,7 @@
 
 This repository contains the development code for the [SWE-Search paper](https://arxiv.org/abs/2403.13657). It is only provided for reproducibility purposes. Use the official [Moatless-Tree-Search repo](https://github.com/aorwall/moatless-tree-search).
 
-![SWE-Search Demo](assets/SWE-Search_demo.gif)
+<img src="assets/SWE-Search_demo.gif" width="100%">
 
 ## Usage
 
